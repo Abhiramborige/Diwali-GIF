@@ -34,6 +34,7 @@ for(var i = 0; i < q.length; i++) {
     he=Math.ceil(he*(100/(window.innerHeight)));
     wi=Math.ceil(wi*(100/(window.innerHeight)))
     /* Making changes for second flowerpot */
-    q[i].style.height=(he-10)+'vh';
-    q[i].style.width=(wi-5)+'vh';
+    /* Decresing the height and width by 50% */
+    q[i].style.height=(he-((he)*50/100))+'vh';
+    q[i].style.width=(wi-((wi)*50/100))+'vh';
 }

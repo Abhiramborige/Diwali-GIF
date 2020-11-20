@@ -54,50 +54,50 @@ body{
 .fire:nth-child(1){
   /* top-left | top-right | bottom-right | bottom-left */
   border-radius: 60vw 40vw 0px 0px;
-  height:40vh;
-  width:20vh;
+  height:35vh;
+  width:15vh;
   animation-delay: 800ms;
 }
 .fire:nth-child(2){
   border-radius: 40vw 60vw 0px 0px;
-  height:40vh;
-  width:20vh;
+  height:35vh;
+  width:15vh;
   animation-delay: 800ms;
 }
 .fire:nth-child(3){
   border-radius: 50vw 30vw 0px 0px;
-  height:30vh;
-  width:15vh;
+  height:25vh;
+  width:11vh;
   animation-delay: 1000ms;
 }
 .fire:nth-child(4){
   border-radius: 30vw 50vw 0px 0px;
-  height:30vh;
-  width:15vh;
+  height:25vh;
+  width:11vh;
   animation-delay: 1000ms;
 }
 .fire:nth-child(5){
   border-radius: 40vw 20vw 0px 0px;
-  height:20vh;
-  width:10vh;
+  height:15vh;
+  width:7vh;
   animation-delay: 1200ms;
 }
 .fire:nth-child(6){
   border-radius: 20vw 40vw 0px 0px;
-  height:20vh;
-  width:10vh;
+  height:15vh;
+  width:7vh;
   animation-delay: 1200ms;
 }
 .fire:nth-child(7){
   border-radius: 30vw 10vw 0px 0px;
-  height:10vh;
-  width:5vh;
+  height:5vh;
+  width:3vh;
   animation-delay: 1400ms;
 }
 .fire:nth-child(8){
   border-radius: 10vw 30vw 0px 0px;
-  height:10vh;
-  width:5vh;
+  height:5vh;
+  width:3vh;
   animation-delay: 1400ms;
 }
 
