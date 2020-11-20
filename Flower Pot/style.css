@@ -1,0 +1,158 @@
+
+body{
+    background-color:black;
+}
+
+.master:nth-child(1){
+  display:flex;
+  justify-content:center;
+  height: 50vh;
+  align-items:flex-end;
+}
+.master:nth-child(2){
+  display:flex;
+  justify-content:center;
+  height: 30vh;
+  align-items:center;
+}
+.master:nth-child(1) > div{
+  transform: translate(-10vw,0px);
+}
+.master:nth-child(1) >.fire{
+  margin-bottom:20px;
+}
+.master:nth-child(2) > div{
+  transform: translate(10vw,0px);
+}
+.master:nth-child(2) > .fire{
+  margin-bottom:35vh;
+  /* To make sure that fire comes from bottom to top */
+  bottom:0%;
+}
+
+.fire{
+  /* To make sure that fire comes from bottom to top */
+  position: absolute;
+  border-top: 5px solid yellow;
+  /* animation-name: burst; */
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.fire:nth-child(odd){
+  border-right: 4px solid yellow;
+  box-shadow: 10px -10px 10px -10px orange;
+  right:50%;
+}
+.fire:nth-child(even){
+  border-left: 4px solid yellow;
+  box-shadow: -10px -10px 10px -10px red;
+  left:50%;
+}
+.fire:nth-child(1){
+  /* top-left | top-right | bottom-right | bottom-left */
+  border-radius: 60vw 40vw 0px 0px;
+  height:40vh;
+  width:20vh;
+  animation-delay: 800ms;
+}
+.fire:nth-child(2){
+  border-radius: 40vw 60vw 0px 0px;
+  height:40vh;
+  width:20vh;
+  animation-delay: 800ms;
+}
+.fire:nth-child(3){
+  border-radius: 50vw 30vw 0px 0px;
+  height:30vh;
+  width:15vh;
+  animation-delay: 1000ms;
+}
+.fire:nth-child(4){
+  border-radius: 30vw 50vw 0px 0px;
+  height:30vh;
+  width:15vh;
+  animation-delay: 1000ms;
+}
+.fire:nth-child(5){
+  border-radius: 40vw 20vw 0px 0px;
+  height:20vh;
+  width:10vh;
+  animation-delay: 1200ms;
+}
+.fire:nth-child(6){
+  border-radius: 20vw 40vw 0px 0px;
+  height:20vh;
+  width:10vh;
+  animation-delay: 1200ms;
+}
+.fire:nth-child(7){
+  border-radius: 30vw 10vw 0px 0px;
+  height:10vh;
+  width:5vh;
+  animation-delay: 1400ms;
+}
+.fire:nth-child(8){
+  border-radius: 10vw 30vw 0px 0px;
+  height:10vh;
+  width:5vh;
+  animation-delay: 1400ms;
+}
+
+@keyframes burst{
+  0%,20%{
+      height:0;
+      opacity:0;
+      width:0;
+      border: 0px solid black;
+  }
+  20%,90%{
+      opacity:1;
+  }
+  100%{
+      opacity:0;
+  }
+}
+.cone{
+  width: 0px;
+  height: 0px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid white;
+}
+.shoot{
+  font-size: medium;
+  text-transform: capitalize;
+  position: absolute;
+  left:40vw;
+  bottom:10vh;
+}
+h1{
+  background: linear-gradient(to right, rgb(35, 255, 237) 0%, 
+  rgb(253, 115, 23) 60%, rgb(255, 74, 74) 100%);
+  -webkit-background-clip: text;
+  text-align: center;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  transform: translate(0vw,-15vh);
+  /* animation-name: transition; */
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  opacity:0;
+}
+@media only screen and (min-width: 600px){
+  h1{
+    transform: translate(-5vw,-25vh);
+  }
+}
+@keyframes transition{
+  0%{
+    opacity:0;
+  }
+  90%,100%{
+    opacity:1;
+  }
+}

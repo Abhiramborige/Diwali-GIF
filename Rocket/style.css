@@ -1,0 +1,149 @@
+body{
+    background-color:black;
+}
+.master:nth-child(1){
+  display:flex;
+  justify-content:center;
+  height: 40vh;
+  align-items:center;
+  margin-right: 34vw;
+}
+.master:nth-child(2){
+  display:flex;
+  justify-content:center;
+  height: 40vh;
+}
+/* More super_burst cann be added by adding one more child element of master */
+.circle{
+  border: 3px solid red;
+  background-color: orange;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 80px 20px 10px orange;
+  /* animation-name: super_burst; */
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.circle:nth-child(1){
+  transform:translate(0px,60px);
+}
+.circle:nth-child(2){
+  transform:translate(45px,45px);
+}
+.circle:nth-child(3){
+  transform:translate(60px,0px);
+}
+.circle:nth-child(4){
+  transform:translate(-45px,-45px);
+}
+.circle:nth-child(5){
+  transform:translate(0px,-60px);
+}
+.circle:nth-child(6){
+  transform:translate(-60px,0px);
+}
+.circle:nth-child(7){
+  transform:translate(45px,-45px);
+}
+.circle:nth-child(8){
+  transform:translate(-45px,45px);
+}
+
+@keyframes super_burst{
+  0%,80%{
+    opacity:0;
+    transform:translate(0px,0px);
+  }
+  90%{
+    opacity:1;
+  }
+  100%{
+    opacity:0;
+  }
+}
+
+.rocket{
+  border: 3px solid white;
+  width: 50px;
+  background:white;
+  /*animation-name: rocket_shoot;*/
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.rocket:nth-child(1){
+  transform: translate(35vw,0px) rotate(-90deg);
+}
+.rocket:nth-child(2){
+  transform: translate(33vw,0px) rotate(-90deg);
+}
+/* More rockets can be added by adding child elements to rocket element.
+The corresponding animation must also be mentioned to the child element. */
+@keyframes rocket_shoot_1{
+  0%{
+    opacity:1;
+  }
+  80%{
+    opacity:0;
+  }
+  100%{
+    opacity:0;
+    transform: translate(50vw,-45vh) rotate(-45deg);
+  }
+}
+@keyframes rocket_shoot_2{
+  0%{
+    opacity:1;
+  }
+  80%{
+    opacity:0;
+  }
+  100%{
+    opacity:0;
+    transform: translate(33vw,-65vh) rotate(-90deg);
+  }
+}
+.shoot{
+  font-size: medium;
+  text-transform: capitalize;
+  position: absolute;
+  left:50vw;
+}
+
+@media only screen and (max-width: 600px){
+  .rocket:nth-child(1){
+    transform: translate(30vw,0px) rotate(-90deg);
+  }
+  .rocket:nth-child(2){
+    transform: translate(25vw,0px) rotate(-90deg);
+  }
+}
+h1{
+  background: linear-gradient(to right, rgb(35, 255, 237) 0%, 
+  rgb(253, 115, 23) 60%, rgb(255, 74, 74) 100%);
+  -webkit-background-clip: text;
+  text-align: center;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  transform: translate(-5vw,-50vh);
+  /* animation-name: transition; */
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  opacity:0;
+}
+
+@keyframes transition{
+  0%{
+    opacity:0;
+  }
+  90%,100%{
+    opacity:1;
+  }
+}
