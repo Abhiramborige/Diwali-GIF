@@ -25,9 +25,9 @@ body{
   transform: translate(10vw,0px);
 }
 .master:nth-child(2) > .fire{
-  margin-bottom:35vh;
+  margin-bottom:0;
   /* To make sure that fire comes from bottom to top */
-  bottom:0%;
+  bottom:35vh;
 }
 
 .fire{
